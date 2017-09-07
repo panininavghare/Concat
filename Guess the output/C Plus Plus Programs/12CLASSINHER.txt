@@ -1,0 +1,70 @@
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+protected:
+int rollno;
+public:
+void get_number()
+{
+cout<<"Input roll no:"<<endl;
+cin>>rollno;
+}
+void put_number()
+{
+cout<<"Roll no is:"<<rollno<<endl;
+}
+};
+class test:public student
+{
+protected:
+int sub1,sub2;
+public:
+void get_marks()
+{
+cout<<"Enter Marks of two subjects:"<<endl;
+cin>>sub1>>sub2;
+}
+void put_marks()
+{
+cout<<"Marks of the subjects are:"<<sub1<<"&"<<sub2<<endl;
+}
+};
+class sports
+{
+protected:
+int score;
+public:
+void get_score()
+{
+cout<<"Enter marks of sports:"<<endl;
+cin>>score;
+}
+void put_score()
+{
+cout<<"Sports marks are:"<<score<<endl;
+}
+};
+class result:public test,public sports
+{
+int total;
+public:
+void display()
+{
+total=sub1+sub2+score;
+put_number();
+put_marks();
+put_score();
+cout<<"Total is:"<<total<<endl;
+}
+};
+void main()
+{
+clrscr();
+result stud;
+stud.get_number();
+stud.get_marks();
+stud.get_score();
+stud.display();
+getch();
+}

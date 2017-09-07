@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+class ratio
+{
+private:
+int num,den;
+public:
+ratio()
+{
+num=1;
+den=5;
+}
+ratio(int a)
+{
+num=a;
+den=4;
+}
+ratio (int a,int b)
+{
+num=a;
+den=b;
+}
+void print ()
+{
+cout<<"ratio:"<<num<<"/"<<den<<endl;
+}
+};
+void main ()
+{
+ratio x,y(5),z(6,5);
+clrscr();
+x.print();
+y.print();
+z.print();
+getch();
+}

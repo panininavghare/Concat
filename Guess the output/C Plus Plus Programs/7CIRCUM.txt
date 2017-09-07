@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<conio.h>
+class circle
+{
+private :
+float x,y,r,a,circum;
+public :
+circle ()
+{
+}
+circle (float p,float q,float rad)
+{
+x=p;
+y=q;
+r=rad;
+}
+void assign ()
+{
+cout<<"Enter x co-ordinate:"<<endl;
+cin>>x;
+cout<<"Enter y co-ordinate:"<<endl;
+cin>>y;
+cout<<"Enter the Radius:"<<endl;
+cin>>r;
+}
+void area ()
+{
+a=3.14*r*r;
+}
+void circ()
+{
+circum=2*3.14*r;
+}
+void print ()
+{
+cout<<"Co-ordinate of Center are :("<<x<<","<<y<<")"<<endl;
+cout<<"Radius is :"<<a<<endl;
+cout<<"Area is :"<<a<<endl;
+cout<<"Circumference is :"<<circum<<endl;
+}
+};
+void main()
+{
+circle C1,C2(2.3,4.1,8.0);
+clrscr();
+C1.assign();
+C1.area();
+C1.circ();
+C1.print();
+C2.area();
+C2.circ();
+C2.print();
+getch ();
+}
