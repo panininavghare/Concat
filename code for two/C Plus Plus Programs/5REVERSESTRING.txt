@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+void main ()
+{
+clrscr();
+char s[20];
+int l;
+void rev (char*,int);
+cout<<"Enter a Sentence :";
+cin.getline(s,20);
+l=strlen(s);
+rev(s,l);
+cout<<"Reverse String: "<<s;
+getch();
+}
+void rev(char*p,int s)
+{
+char *st,*end,l;
+st=p;
+end=p+s-1;
+while (st<end)
+{
+char t;
+t=*st;
+*st=*end;
+*end=t;
+st++;
+end--;
+}
+}

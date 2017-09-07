@@ -1,0 +1,31 @@
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+clrscr();
+float i,j,t;
+int a[10]={20,6,43,9,26,51,61,62,95,30};
+cout<<"Unsorted List";
+for(i=0;i<=9;i++)
+{
+cout<<a[i]<<" ";
+}
+for (i=0;i<=9;i++)
+{
+for (j=0;j<=9-i;j++)
+{
+if (a[j]>a[j+1])
+{
+t=a[j];
+a[j]=a[j+1];
+a[j+1]=t;
+}
+}
+}
+cout<<"Sorted List"<<endl;
+for(i=0;i<=9;i++)
+{
+cout<<a[i]<<" ";
+}
+getch();
+}

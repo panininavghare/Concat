@@ -1,0 +1,49 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+clrscr();
+int a[10],i;
+cout<<"Enter 9 Numbers";
+for(i=0;i<9;i++)
+cin>>a[i];
+int p,mid,up,dn;
+cout<<"Enter any Number:";
+cin>>p;
+up=0;
+dn=8;
+mid=(up+dn)/2;
+while(up<dn)
+{
+if((p<a[up])||(p>a[dn]))
+{
+cout<<"Not Found";
+getch();
+exit(0);
+}
+if (p==a[up])
+{
+cout<<"Found At"<<up+1;
+getch();
+exit(0);
+}
+if(p==a[dn])
+{
+cout<<"Found At"<<dn+1;
+getch();
+exit(0);
+}
+if(p==a[mid])
+{
+cout<<"found at"<<mid+1;
+getch();
+exit(0);
+}
+if(p<a[mid])
+dn=mid-1;
+else
+up=mid+1;
+}
+getch();
+}

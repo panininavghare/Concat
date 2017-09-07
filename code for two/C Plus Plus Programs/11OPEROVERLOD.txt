@@ -1,0 +1,53 @@
+#include<iostream.h>
+#include<conio.h>
+class ratio
+{
+int num,den;
+public:
+ratio()
+{
+}
+ratio(int a,int b)
+{
+num=a;
+den=b;
+}
+ratio operator+(ratio);
+ratio operator/(ratio);
+void display();
+};
+ratio ratio::operator+(ratio x)
+{
+ratio temp;
+temp.num=num*x.den+x.num*den;
+temp.den=den*x.den;
+return temp;
+}
+ratio ratio::operator/(ratio x)
+{
+ratio temp;
+temp.num=num*x.den;
+temp.den=den*x.num;
+return temp;
+}
+void ratio::display()
+{
+cout<<num<<"/"<<den;
+}
+void main()
+{
+clrscr();
+ratio r1(2,3);
+ratio r2(4,6);
+cout<<"\n first ratio:";
+r1.display();
+cout<<"\n second ratio:";
+r2.display();
+ratio r3=r1+r2;
+cout<<"\n sum of ratio is:";
+r3.display();
+ratio r4=r1/r2;
+cout<<"\n division of ratio is:";
+r4.display();
+getch();
+}
